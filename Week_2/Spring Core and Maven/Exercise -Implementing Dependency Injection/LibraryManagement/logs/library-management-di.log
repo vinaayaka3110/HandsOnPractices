@@ -1,0 +1,363 @@
+2025-06-29 17:22:18.418 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - Starting Enhanced Library Management Application with Dependency Injection...
+2025-06-29 17:22:18.751 [com.library.LibraryManagementApplication.main()] INFO  c.library.repository.BookRepository - BookRepository initialized with default constructor
+2025-06-29 17:22:18.794 [com.library.LibraryManagementApplication.main()] INFO  c.library.repository.BookRepository - Repository name set to: Advanced Library Database Repository
+2025-06-29 17:22:18.795 [com.library.LibraryManagementApplication.main()] INFO  c.library.repository.BookRepository - Repository capacity set to: 1000
+2025-06-29 17:22:18.796 [com.library.LibraryManagementApplication.main()] INFO  c.library.repository.BookRepository - Connection timeout set to: 30 seconds
+2025-06-29 17:22:18.810 [com.library.LibraryManagementApplication.main()] INFO  c.library.repository.BookRepository - BookRepository initialized with constructor injection - Name: Constructor-Based Repository, Capacity: 500, Timeout: 60
+2025-06-29 17:22:18.812 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - BookService initialized with default constructor
+2025-06-29 17:22:18.815 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - BookRepository injected into BookService via setter
+2025-06-29 17:22:18.816 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Service name set to: Enhanced Library Book Management Service
+2025-06-29 17:22:18.816 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Max books per user set to: 5
+2025-06-29 17:22:18.817 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Loan period set to: 14 days
+2025-06-29 17:22:18.823 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - BookService initialized with constructor injection - Service: Constructor-Based Book Service, Max Books: 3, Loan Period: 21 days
+2025-06-29 17:22:18.824 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - LibraryManager initialized
+2025-06-29 17:22:18.827 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - BookService injected into LibraryManager
+2025-06-29 17:22:18.827 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - BookRepository injected into LibraryManager
+2025-06-29 17:22:18.827 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Manager name set to: Chief Library Manager
+2025-06-29 17:22:18.828 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Operating hours set to: 8:00 AM - 6:00 PM
+2025-06-29 17:22:18.828 [com.library.LibraryManagementApplication.main()] INFO  com.library.config.LibraryConfig - LibraryConfig initialized
+2025-06-29 17:22:18.830 [com.library.LibraryManagementApplication.main()] INFO  com.library.config.LibraryConfig - Application name configured: Digital Library Management System
+2025-06-29 17:22:18.830 [com.library.LibraryManagementApplication.main()] INFO  com.library.config.LibraryConfig - Version configured: 2.0
+2025-06-29 17:22:18.831 [com.library.LibraryManagementApplication.main()] INFO  com.library.config.LibraryConfig - Logging enabled: true
+2025-06-29 17:22:18.831 [com.library.LibraryManagementApplication.main()] INFO  com.library.config.LibraryConfig - Caching enabled: false
+2025-06-29 17:22:18.842 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - Spring Application Context loaded successfully
+2025-06-29 17:22:18.843 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - === Demonstrating Dependency Injection Types ===
+2025-06-29 17:22:18.843 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - 
+--- 1. Setter-based Dependency Injection ---
+2025-06-29 17:22:18.843 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - Testing Setter-based Dependency Injection:
+2025-06-29 17:22:18.843 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Dependency injection status - BookRepository: INJECTED
+2025-06-29 17:22:18.843 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - BookService dependency injection status: true
+2025-06-29 17:22:18.844 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - Service configuration: Service: Enhanced Library Book Management Service, Max Books Per User: 5, Loan Period: 14 days, Repository: Advanced Library Database Repository
+2025-06-29 17:22:18.844 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - Repository details: Advanced Library Database Repository (Capacity: 1000)
+2025-06-29 17:22:18.844 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - Testing functionality with 7 books
+2025-06-29 17:22:18.844 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Testing repository connection from service: Enhanced Library Book Management Service
+2025-06-29 17:22:18.845 [com.library.LibraryManagementApplication.main()] INFO  c.library.repository.BookRepository - Testing repository connection with timeout: 30 seconds
+2025-06-29 17:22:18.946 [com.library.LibraryManagementApplication.main()] INFO  c.library.repository.BookRepository - Repository connection test successful
+2025-06-29 17:22:18.946 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - 
+--- 2. Constructor-based Dependency Injection ---
+2025-06-29 17:22:18.946 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - Testing Constructor-based Dependency Injection:
+2025-06-29 17:22:18.946 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Dependency injection status - BookRepository: INJECTED
+2025-06-29 17:22:18.947 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - Constructor-based BookService dependency injection status: true
+2025-06-29 17:22:18.947 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - Constructor service configuration: Service: Constructor-Based Book Service, Max Books Per User: 3, Loan Period: 21 days, Repository: Constructor-Based Repository
+2025-06-29 17:22:18.947 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - Constructor repository details: Constructor-Based Repository (Capacity: 500)
+2025-06-29 17:22:18.947 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - Testing constructor-based service with 7 books
+2025-06-29 17:22:18.947 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Testing repository connection from service: Constructor-Based Book Service
+2025-06-29 17:22:18.948 [com.library.LibraryManagementApplication.main()] INFO  c.library.repository.BookRepository - Testing repository connection with timeout: 60 seconds
+2025-06-29 17:22:19.050 [com.library.LibraryManagementApplication.main()] INFO  c.library.repository.BookRepository - Repository connection test successful
+2025-06-29 17:22:19.051 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - 
+--- 3. Multi-level Dependency Injection ---
+2025-06-29 17:22:19.051 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - Testing Multi-level Dependency Injection:
+2025-06-29 17:22:19.052 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Dependency injection status - BookRepository: INJECTED
+2025-06-29 17:22:19.052 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Dependency injection verification:
+2025-06-29 17:22:19.052 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - BookService injected: true
+2025-06-29 17:22:19.052 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - BookRepository injected: true
+2025-06-29 17:22:19.052 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Dependency injection status - BookRepository: INJECTED
+2025-06-29 17:22:19.052 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - BookService->BookRepository injected: true
+2025-06-29 17:22:19.053 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - All dependencies properly injected: true
+2025-06-29 17:22:19.053 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - All dependencies properly injected: true
+2025-06-29 17:22:19.053 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Initializing library under manager: Chief Library Manager
+2025-06-29 17:22:19.053 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Operating hours: 8:00 AM - 6:00 PM
+2025-06-29 17:22:19.053 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - All dependencies successfully injected
+2025-06-29 17:22:19.053 [com.library.LibraryManagementApplication.main()] INFO  c.library.repository.BookRepository - Testing repository connection with timeout: 30 seconds
+2025-06-29 17:22:19.154 [com.library.LibraryManagementApplication.main()] INFO  c.library.repository.BookRepository - Repository connection test successful
+2025-06-29 17:22:19.154 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - === Library Status ===
+2025-06-29 17:22:19.154 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Manager: Chief Library Manager
+2025-06-29 17:22:19.154 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Operating Hours: 8:00 AM - 6:00 PM
+2025-06-29 17:22:19.154 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Total Books: 7
+2025-06-29 17:22:19.155 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Available Books: 7
+2025-06-29 17:22:19.155 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Borrowed Books: 0
+2025-06-29 17:22:19.155 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Repository: Advanced Library Database Repository
+2025-06-29 17:22:19.156 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Repository Capacity: 1000
+2025-06-29 17:22:19.156 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Service Configuration: Service: Enhanced Library Book Management Service, Max Books Per User: 5, Loan Period: 14 days, Repository: Advanced Library Database Repository
+2025-06-29 17:22:19.156 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - === Library Manager performing operations ===
+2025-06-29 17:22:19.156 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - === Library Status ===
+2025-06-29 17:22:19.156 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Manager: Chief Library Manager
+2025-06-29 17:22:19.156 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Operating Hours: 8:00 AM - 6:00 PM
+2025-06-29 17:22:19.156 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Total Books: 7
+2025-06-29 17:22:19.156 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Available Books: 7
+2025-06-29 17:22:19.157 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Borrowed Books: 0
+2025-06-29 17:22:19.157 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Repository: Advanced Library Database Repository
+2025-06-29 17:22:19.157 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Repository Capacity: 1000
+2025-06-29 17:22:19.157 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Service Configuration: Service: Enhanced Library Book Management Service, Max Books Per User: 5, Loan Period: 14 days, Repository: Advanced Library Database Repository
+2025-06-29 17:22:19.157 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Adding new book: Dependency Injection Guide by Spring Team in category: Technology
+2025-06-29 17:22:19.157 [com.library.LibraryManagementApplication.main()] INFO  c.library.repository.BookRepository - Saving book: Dependency Injection Guide to repository: Advanced Library Database Repository
+2025-06-29 17:22:19.159 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Manager added new book: Dependency Injection Guide
+2025-06-29 17:22:19.160 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - === Performing Search Operations ===
+2025-06-29 17:22:19.160 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Searching books by category: 'Technology'
+2025-06-29 17:22:19.160 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Found 3 technology books
+2025-06-29 17:22:19.161 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Searching books by author: 'George'
+2025-06-29 17:22:19.161 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Found 1 books by authors containing 'George'
+2025-06-29 17:22:19.162 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Searching books in price range: 10.0 - 20.0
+2025-06-29 17:22:19.162 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Found 5 books in price range $10-$20
+2025-06-29 17:22:19.163 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - === Testing Borrowing Workflow ===
+2025-06-29 17:22:19.163 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Processing book borrow request for ID: 1 by user: USER001
+2025-06-29 17:22:19.163 [com.library.LibraryManagementApplication.main()] INFO  c.library.repository.BookRepository - Saving book: The Great Gatsby to repository: Advanced Library Database Repository
+2025-06-29 17:22:19.163 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Book borrowed successfully: The Great Gatsby for 14 days
+2025-06-29 17:22:19.163 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Borrow result for book ID 1: true
+2025-06-29 17:22:19.163 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Processing book borrow request for ID: 1 by user: USER001
+2025-06-29 17:22:19.164 [com.library.LibraryManagementApplication.main()] WARN  com.library.service.BookService - Book is not available for borrowing: The Great Gatsby
+2025-06-29 17:22:19.164 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Second borrow attempt result: false
+2025-06-29 17:22:19.164 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Processing book return for ID: 1 by user: USER001
+2025-06-29 17:22:19.164 [com.library.LibraryManagementApplication.main()] INFO  c.library.repository.BookRepository - Saving book: The Great Gatsby to repository: Advanced Library Database Repository
+2025-06-29 17:22:19.164 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Book returned successfully: The Great Gatsby
+2025-06-29 17:22:19.164 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Return result for book ID 1: true
+2025-06-29 17:22:19.165 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - === Library Management Report ===
+2025-06-29 17:22:19.165 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Found 8 books in the library
+2025-06-29 17:22:19.165 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.BookService - Found 8 available books
+2025-06-29 17:22:19.165 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Library managed by: Chief Library Manager
+2025-06-29 17:22:19.165 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Total books in collection: 8
+2025-06-29 17:22:19.165 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Books currently available: 8
+2025-06-29 17:22:19.165 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Books currently borrowed: 0
+2025-06-29 17:22:19.167 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Category 'Dystopian': 1 books
+2025-06-29 17:22:19.168 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Category 'Technology': 3 books
+2025-06-29 17:22:19.168 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Category 'Romance': 1 books
+2025-06-29 17:22:19.168 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Category 'Fiction': 3 books
+2025-06-29 17:22:19.175 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Total collection value: $196.43
+2025-06-29 17:22:19.176 [com.library.LibraryManagementApplication.main()] INFO  com.library.service.LibraryManager - Repository configuration: Advanced Library Database Repository (Max capacity: 1000)
+2025-06-29 17:22:19.176 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - 
+--- 4. Configuration Property Injection ---
+2025-06-29 17:22:19.176 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - Testing Configuration Property Injection:
+2025-06-29 17:22:19.176 [com.library.LibraryManagementApplication.main()] INFO  com.library.config.LibraryConfig - === Library Configuration ===
+2025-06-29 17:22:19.176 [com.library.LibraryManagementApplication.main()] INFO  com.library.config.LibraryConfig - Application Name: Digital Library Management System
+2025-06-29 17:22:19.177 [com.library.LibraryManagementApplication.main()] INFO  com.library.config.LibraryConfig - Version: 2.0
+2025-06-29 17:22:19.177 [com.library.LibraryManagementApplication.main()] INFO  com.library.config.LibraryConfig - Logging Enabled: true
+2025-06-29 17:22:19.177 [com.library.LibraryManagementApplication.main()] INFO  com.library.config.LibraryConfig - Caching Enabled: false
+2025-06-29 17:22:19.177 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - Configuration properties successfully injected:
+2025-06-29 17:22:19.177 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication -   - Application: Digital Library Management System
+2025-06-29 17:22:19.177 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication -   - Version: 2.0
+2025-06-29 17:22:19.178 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication -   - Logging: true
+2025-06-29 17:22:19.178 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication -   - Caching: false
+2025-06-29 17:22:19.178 [com.library.LibraryManagementApplication.main()] INFO  c.l.LibraryManagementApplication - Enhanced Library Management Application finished.
+2025-06-29 17:23:29.791 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with default constructor
+2025-06-29 17:23:29.864 [main] INFO  c.library.repository.BookRepository - Repository name set to: Advanced Library Database Repository
+2025-06-29 17:23:29.865 [main] INFO  c.library.repository.BookRepository - Repository capacity set to: 1000
+2025-06-29 17:23:29.866 [main] INFO  c.library.repository.BookRepository - Connection timeout set to: 30 seconds
+2025-06-29 17:23:29.882 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with constructor injection - Name: Constructor-Based Repository, Capacity: 500, Timeout: 60
+2025-06-29 17:23:29.883 [main] INFO  com.library.service.BookService - BookService initialized with default constructor
+2025-06-29 17:23:29.887 [main] INFO  com.library.service.BookService - BookRepository injected into BookService via setter
+2025-06-29 17:23:29.887 [main] INFO  com.library.service.BookService - Service name set to: Enhanced Library Book Management Service
+2025-06-29 17:23:29.887 [main] INFO  com.library.service.BookService - Max books per user set to: 5
+2025-06-29 17:23:29.887 [main] INFO  com.library.service.BookService - Loan period set to: 14 days
+2025-06-29 17:23:29.895 [main] INFO  com.library.service.BookService - BookService initialized with constructor injection - Service: Constructor-Based Book Service, Max Books: 3, Loan Period: 21 days
+2025-06-29 17:23:29.896 [main] INFO  com.library.service.LibraryManager - LibraryManager initialized
+2025-06-29 17:23:29.899 [main] INFO  com.library.service.LibraryManager - BookService injected into LibraryManager
+2025-06-29 17:23:29.900 [main] INFO  com.library.service.LibraryManager - BookRepository injected into LibraryManager
+2025-06-29 17:23:29.900 [main] INFO  com.library.service.LibraryManager - Manager name set to: Chief Library Manager
+2025-06-29 17:23:29.900 [main] INFO  com.library.service.LibraryManager - Operating hours set to: 8:00 AM - 6:00 PM
+2025-06-29 17:23:29.900 [main] INFO  com.library.config.LibraryConfig - LibraryConfig initialized
+2025-06-29 17:23:29.903 [main] INFO  com.library.config.LibraryConfig - Application name configured: Digital Library Management System
+2025-06-29 17:23:29.903 [main] INFO  com.library.config.LibraryConfig - Version configured: 2.0
+2025-06-29 17:23:29.904 [main] INFO  com.library.config.LibraryConfig - Logging enabled: true
+2025-06-29 17:23:29.904 [main] INFO  com.library.config.LibraryConfig - Caching enabled: false
+2025-06-29 17:23:29.926 [main] INFO  c.library.repository.BookRepository - Testing repository connection with timeout: 30 seconds
+2025-06-29 17:23:30.027 [main] INFO  c.library.repository.BookRepository - Repository connection test successful
+2025-06-29 17:23:30.122 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with default constructor
+2025-06-29 17:23:30.124 [main] INFO  c.library.repository.BookRepository - Repository name set to: Advanced Library Database Repository
+2025-06-29 17:23:30.124 [main] INFO  c.library.repository.BookRepository - Repository capacity set to: 1000
+2025-06-29 17:23:30.124 [main] INFO  c.library.repository.BookRepository - Connection timeout set to: 30 seconds
+2025-06-29 17:23:30.126 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with constructor injection - Name: Constructor-Based Repository, Capacity: 500, Timeout: 60
+2025-06-29 17:23:30.126 [main] INFO  com.library.service.BookService - BookService initialized with default constructor
+2025-06-29 17:23:30.128 [main] INFO  com.library.service.BookService - BookRepository injected into BookService via setter
+2025-06-29 17:23:30.128 [main] INFO  com.library.service.BookService - Service name set to: Enhanced Library Book Management Service
+2025-06-29 17:23:30.128 [main] INFO  com.library.service.BookService - Max books per user set to: 5
+2025-06-29 17:23:30.128 [main] INFO  com.library.service.BookService - Loan period set to: 14 days
+2025-06-29 17:23:30.130 [main] INFO  com.library.service.BookService - BookService initialized with constructor injection - Service: Constructor-Based Book Service, Max Books: 3, Loan Period: 21 days
+2025-06-29 17:23:30.131 [main] INFO  com.library.service.LibraryManager - LibraryManager initialized
+2025-06-29 17:23:30.131 [main] INFO  com.library.service.LibraryManager - BookService injected into LibraryManager
+2025-06-29 17:23:30.131 [main] INFO  com.library.service.LibraryManager - BookRepository injected into LibraryManager
+2025-06-29 17:23:30.131 [main] INFO  com.library.service.LibraryManager - Manager name set to: Chief Library Manager
+2025-06-29 17:23:30.132 [main] INFO  com.library.service.LibraryManager - Operating hours set to: 8:00 AM - 6:00 PM
+2025-06-29 17:23:30.132 [main] INFO  com.library.config.LibraryConfig - LibraryConfig initialized
+2025-06-29 17:23:30.132 [main] INFO  com.library.config.LibraryConfig - Application name configured: Digital Library Management System
+2025-06-29 17:23:30.132 [main] INFO  com.library.config.LibraryConfig - Version configured: 2.0
+2025-06-29 17:23:30.132 [main] INFO  com.library.config.LibraryConfig - Logging enabled: true
+2025-06-29 17:23:30.133 [main] INFO  com.library.config.LibraryConfig - Caching enabled: false
+2025-06-29 17:23:30.165 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with default constructor
+2025-06-29 17:23:30.167 [main] INFO  c.library.repository.BookRepository - Repository name set to: Advanced Library Database Repository
+2025-06-29 17:23:30.167 [main] INFO  c.library.repository.BookRepository - Repository capacity set to: 1000
+2025-06-29 17:23:30.167 [main] INFO  c.library.repository.BookRepository - Connection timeout set to: 30 seconds
+2025-06-29 17:23:30.169 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with constructor injection - Name: Constructor-Based Repository, Capacity: 500, Timeout: 60
+2025-06-29 17:23:30.170 [main] INFO  com.library.service.BookService - BookService initialized with default constructor
+2025-06-29 17:23:30.171 [main] INFO  com.library.service.BookService - BookRepository injected into BookService via setter
+2025-06-29 17:23:30.171 [main] INFO  com.library.service.BookService - Service name set to: Enhanced Library Book Management Service
+2025-06-29 17:23:30.171 [main] INFO  com.library.service.BookService - Max books per user set to: 5
+2025-06-29 17:23:30.172 [main] INFO  com.library.service.BookService - Loan period set to: 14 days
+2025-06-29 17:23:30.174 [main] INFO  com.library.service.BookService - BookService initialized with constructor injection - Service: Constructor-Based Book Service, Max Books: 3, Loan Period: 21 days
+2025-06-29 17:23:30.174 [main] INFO  com.library.service.LibraryManager - LibraryManager initialized
+2025-06-29 17:23:30.175 [main] INFO  com.library.service.LibraryManager - BookService injected into LibraryManager
+2025-06-29 17:23:30.176 [main] INFO  com.library.service.LibraryManager - BookRepository injected into LibraryManager
+2025-06-29 17:23:30.176 [main] INFO  com.library.service.LibraryManager - Manager name set to: Chief Library Manager
+2025-06-29 17:23:30.177 [main] INFO  com.library.service.LibraryManager - Operating hours set to: 8:00 AM - 6:00 PM
+2025-06-29 17:23:30.179 [main] INFO  com.library.config.LibraryConfig - LibraryConfig initialized
+2025-06-29 17:23:30.182 [main] INFO  com.library.config.LibraryConfig - Application name configured: Digital Library Management System
+2025-06-29 17:23:30.183 [main] INFO  com.library.config.LibraryConfig - Version configured: 2.0
+2025-06-29 17:23:30.183 [main] INFO  com.library.config.LibraryConfig - Logging enabled: true
+2025-06-29 17:23:30.183 [main] INFO  com.library.config.LibraryConfig - Caching enabled: false
+2025-06-29 17:23:30.237 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with default constructor
+2025-06-29 17:23:30.239 [main] INFO  c.library.repository.BookRepository - Repository name set to: Advanced Library Database Repository
+2025-06-29 17:23:30.239 [main] INFO  c.library.repository.BookRepository - Repository capacity set to: 1000
+2025-06-29 17:23:30.239 [main] INFO  c.library.repository.BookRepository - Connection timeout set to: 30 seconds
+2025-06-29 17:23:30.242 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with constructor injection - Name: Constructor-Based Repository, Capacity: 500, Timeout: 60
+2025-06-29 17:23:30.242 [main] INFO  com.library.service.BookService - BookService initialized with default constructor
+2025-06-29 17:23:30.244 [main] INFO  com.library.service.BookService - BookRepository injected into BookService via setter
+2025-06-29 17:23:30.244 [main] INFO  com.library.service.BookService - Service name set to: Enhanced Library Book Management Service
+2025-06-29 17:23:30.244 [main] INFO  com.library.service.BookService - Max books per user set to: 5
+2025-06-29 17:23:30.245 [main] INFO  com.library.service.BookService - Loan period set to: 14 days
+2025-06-29 17:23:30.247 [main] INFO  com.library.service.BookService - BookService initialized with constructor injection - Service: Constructor-Based Book Service, Max Books: 3, Loan Period: 21 days
+2025-06-29 17:23:30.248 [main] INFO  com.library.service.LibraryManager - LibraryManager initialized
+2025-06-29 17:23:30.249 [main] INFO  com.library.service.LibraryManager - BookService injected into LibraryManager
+2025-06-29 17:23:30.250 [main] INFO  com.library.service.LibraryManager - BookRepository injected into LibraryManager
+2025-06-29 17:23:30.250 [main] INFO  com.library.service.LibraryManager - Manager name set to: Chief Library Manager
+2025-06-29 17:23:30.250 [main] INFO  com.library.service.LibraryManager - Operating hours set to: 8:00 AM - 6:00 PM
+2025-06-29 17:23:30.250 [main] INFO  com.library.config.LibraryConfig - LibraryConfig initialized
+2025-06-29 17:23:30.251 [main] INFO  com.library.config.LibraryConfig - Application name configured: Digital Library Management System
+2025-06-29 17:23:30.252 [main] INFO  com.library.config.LibraryConfig - Version configured: 2.0
+2025-06-29 17:23:30.252 [main] INFO  com.library.config.LibraryConfig - Logging enabled: true
+2025-06-29 17:23:30.252 [main] INFO  com.library.config.LibraryConfig - Caching enabled: false
+2025-06-29 17:23:30.254 [main] INFO  com.library.service.BookService - Dependency injection status - BookRepository: INJECTED
+2025-06-29 17:23:30.256 [main] INFO  com.library.service.BookService - Dependency injection status - BookRepository: INJECTED
+2025-06-29 17:23:30.256 [main] INFO  com.library.service.BookService - Found 7 books in the library
+2025-06-29 17:23:30.257 [main] INFO  com.library.service.BookService - Found 7 books in the library
+2025-06-29 17:23:30.288 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with default constructor
+2025-06-29 17:23:30.290 [main] INFO  c.library.repository.BookRepository - Repository name set to: Advanced Library Database Repository
+2025-06-29 17:23:30.291 [main] INFO  c.library.repository.BookRepository - Repository capacity set to: 1000
+2025-06-29 17:23:30.291 [main] INFO  c.library.repository.BookRepository - Connection timeout set to: 30 seconds
+2025-06-29 17:23:30.296 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with constructor injection - Name: Constructor-Based Repository, Capacity: 500, Timeout: 60
+2025-06-29 17:23:30.297 [main] INFO  com.library.service.BookService - BookService initialized with default constructor
+2025-06-29 17:23:30.299 [main] INFO  com.library.service.BookService - BookRepository injected into BookService via setter
+2025-06-29 17:23:30.299 [main] INFO  com.library.service.BookService - Service name set to: Enhanced Library Book Management Service
+2025-06-29 17:23:30.299 [main] INFO  com.library.service.BookService - Max books per user set to: 5
+2025-06-29 17:23:30.299 [main] INFO  com.library.service.BookService - Loan period set to: 14 days
+2025-06-29 17:23:30.302 [main] INFO  com.library.service.BookService - BookService initialized with constructor injection - Service: Constructor-Based Book Service, Max Books: 3, Loan Period: 21 days
+2025-06-29 17:23:30.302 [main] INFO  com.library.service.LibraryManager - LibraryManager initialized
+2025-06-29 17:23:30.303 [main] INFO  com.library.service.LibraryManager - BookService injected into LibraryManager
+2025-06-29 17:23:30.304 [main] INFO  com.library.service.LibraryManager - BookRepository injected into LibraryManager
+2025-06-29 17:23:30.305 [main] INFO  com.library.service.LibraryManager - Manager name set to: Chief Library Manager
+2025-06-29 17:23:30.305 [main] INFO  com.library.service.LibraryManager - Operating hours set to: 8:00 AM - 6:00 PM
+2025-06-29 17:23:30.306 [main] INFO  com.library.config.LibraryConfig - LibraryConfig initialized
+2025-06-29 17:23:30.306 [main] INFO  com.library.config.LibraryConfig - Application name configured: Digital Library Management System
+2025-06-29 17:23:30.307 [main] INFO  com.library.config.LibraryConfig - Version configured: 2.0
+2025-06-29 17:23:30.307 [main] INFO  com.library.config.LibraryConfig - Logging enabled: true
+2025-06-29 17:23:30.307 [main] INFO  com.library.config.LibraryConfig - Caching enabled: false
+2025-06-29 17:23:30.308 [main] INFO  com.library.service.BookService - Found 7 books in the library
+2025-06-29 17:23:30.308 [main] INFO  com.library.service.BookService - Searching books by category: 'Technology'
+2025-06-29 17:23:30.337 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with default constructor
+2025-06-29 17:23:30.338 [main] INFO  c.library.repository.BookRepository - Repository name set to: Advanced Library Database Repository
+2025-06-29 17:23:30.339 [main] INFO  c.library.repository.BookRepository - Repository capacity set to: 1000
+2025-06-29 17:23:30.339 [main] INFO  c.library.repository.BookRepository - Connection timeout set to: 30 seconds
+2025-06-29 17:23:30.341 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with constructor injection - Name: Constructor-Based Repository, Capacity: 500, Timeout: 60
+2025-06-29 17:23:30.341 [main] INFO  com.library.service.BookService - BookService initialized with default constructor
+2025-06-29 17:23:30.343 [main] INFO  com.library.service.BookService - BookRepository injected into BookService via setter
+2025-06-29 17:23:30.344 [main] INFO  com.library.service.BookService - Service name set to: Enhanced Library Book Management Service
+2025-06-29 17:23:30.345 [main] INFO  com.library.service.BookService - Max books per user set to: 5
+2025-06-29 17:23:30.345 [main] INFO  com.library.service.BookService - Loan period set to: 14 days
+2025-06-29 17:23:30.348 [main] INFO  com.library.service.BookService - BookService initialized with constructor injection - Service: Constructor-Based Book Service, Max Books: 3, Loan Period: 21 days
+2025-06-29 17:23:30.348 [main] INFO  com.library.service.LibraryManager - LibraryManager initialized
+2025-06-29 17:23:30.349 [main] INFO  com.library.service.LibraryManager - BookService injected into LibraryManager
+2025-06-29 17:23:30.349 [main] INFO  com.library.service.LibraryManager - BookRepository injected into LibraryManager
+2025-06-29 17:23:30.349 [main] INFO  com.library.service.LibraryManager - Manager name set to: Chief Library Manager
+2025-06-29 17:23:30.349 [main] INFO  com.library.service.LibraryManager - Operating hours set to: 8:00 AM - 6:00 PM
+2025-06-29 17:23:30.350 [main] INFO  com.library.config.LibraryConfig - LibraryConfig initialized
+2025-06-29 17:23:30.351 [main] INFO  com.library.config.LibraryConfig - Application name configured: Digital Library Management System
+2025-06-29 17:23:30.351 [main] INFO  com.library.config.LibraryConfig - Version configured: 2.0
+2025-06-29 17:23:30.351 [main] INFO  com.library.config.LibraryConfig - Logging enabled: true
+2025-06-29 17:23:30.351 [main] INFO  com.library.config.LibraryConfig - Caching enabled: false
+2025-06-29 17:23:30.352 [main] INFO  com.library.service.BookService - Dependency injection status - BookRepository: INJECTED
+2025-06-29 17:23:30.352 [main] INFO  com.library.service.LibraryManager - Dependency injection verification:
+2025-06-29 17:23:30.352 [main] INFO  com.library.service.LibraryManager - BookService injected: true
+2025-06-29 17:23:30.352 [main] INFO  com.library.service.LibraryManager - BookRepository injected: true
+2025-06-29 17:23:30.352 [main] INFO  com.library.service.BookService - Dependency injection status - BookRepository: INJECTED
+2025-06-29 17:23:30.352 [main] INFO  com.library.service.LibraryManager - BookService->BookRepository injected: true
+2025-06-29 17:23:30.352 [main] INFO  com.library.service.LibraryManager - All dependencies properly injected: true
+2025-06-29 17:23:30.371 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with default constructor
+2025-06-29 17:23:30.372 [main] INFO  c.library.repository.BookRepository - Repository name set to: Advanced Library Database Repository
+2025-06-29 17:23:30.372 [main] INFO  c.library.repository.BookRepository - Repository capacity set to: 1000
+2025-06-29 17:23:30.372 [main] INFO  c.library.repository.BookRepository - Connection timeout set to: 30 seconds
+2025-06-29 17:23:30.374 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with constructor injection - Name: Constructor-Based Repository, Capacity: 500, Timeout: 60
+2025-06-29 17:23:30.374 [main] INFO  com.library.service.BookService - BookService initialized with default constructor
+2025-06-29 17:23:30.375 [main] INFO  com.library.service.BookService - BookRepository injected into BookService via setter
+2025-06-29 17:23:30.375 [main] INFO  com.library.service.BookService - Service name set to: Enhanced Library Book Management Service
+2025-06-29 17:23:30.375 [main] INFO  com.library.service.BookService - Max books per user set to: 5
+2025-06-29 17:23:30.375 [main] INFO  com.library.service.BookService - Loan period set to: 14 days
+2025-06-29 17:23:30.377 [main] INFO  com.library.service.BookService - BookService initialized with constructor injection - Service: Constructor-Based Book Service, Max Books: 3, Loan Period: 21 days
+2025-06-29 17:23:30.378 [main] INFO  com.library.service.LibraryManager - LibraryManager initialized
+2025-06-29 17:23:30.379 [main] INFO  com.library.service.LibraryManager - BookService injected into LibraryManager
+2025-06-29 17:23:30.379 [main] INFO  com.library.service.LibraryManager - BookRepository injected into LibraryManager
+2025-06-29 17:23:30.379 [main] INFO  com.library.service.LibraryManager - Manager name set to: Chief Library Manager
+2025-06-29 17:23:30.379 [main] INFO  com.library.service.LibraryManager - Operating hours set to: 8:00 AM - 6:00 PM
+2025-06-29 17:23:30.379 [main] INFO  com.library.config.LibraryConfig - LibraryConfig initialized
+2025-06-29 17:23:30.380 [main] INFO  com.library.config.LibraryConfig - Application name configured: Digital Library Management System
+2025-06-29 17:23:30.380 [main] INFO  com.library.config.LibraryConfig - Version configured: 2.0
+2025-06-29 17:23:30.380 [main] INFO  com.library.config.LibraryConfig - Logging enabled: true
+2025-06-29 17:23:30.380 [main] INFO  com.library.config.LibraryConfig - Caching enabled: false
+2025-06-29 17:23:30.398 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with default constructor
+2025-06-29 17:23:30.399 [main] INFO  c.library.repository.BookRepository - Repository name set to: Advanced Library Database Repository
+2025-06-29 17:23:30.399 [main] INFO  c.library.repository.BookRepository - Repository capacity set to: 1000
+2025-06-29 17:23:30.399 [main] INFO  c.library.repository.BookRepository - Connection timeout set to: 30 seconds
+2025-06-29 17:23:30.401 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with constructor injection - Name: Constructor-Based Repository, Capacity: 500, Timeout: 60
+2025-06-29 17:23:30.401 [main] INFO  com.library.service.BookService - BookService initialized with default constructor
+2025-06-29 17:23:30.402 [main] INFO  com.library.service.BookService - BookRepository injected into BookService via setter
+2025-06-29 17:23:30.402 [main] INFO  com.library.service.BookService - Service name set to: Enhanced Library Book Management Service
+2025-06-29 17:23:30.402 [main] INFO  com.library.service.BookService - Max books per user set to: 5
+2025-06-29 17:23:30.402 [main] INFO  com.library.service.BookService - Loan period set to: 14 days
+2025-06-29 17:23:30.404 [main] INFO  com.library.service.BookService - BookService initialized with constructor injection - Service: Constructor-Based Book Service, Max Books: 3, Loan Period: 21 days
+2025-06-29 17:23:30.405 [main] INFO  com.library.service.LibraryManager - LibraryManager initialized
+2025-06-29 17:23:30.405 [main] INFO  com.library.service.LibraryManager - BookService injected into LibraryManager
+2025-06-29 17:23:30.405 [main] INFO  com.library.service.LibraryManager - BookRepository injected into LibraryManager
+2025-06-29 17:23:30.405 [main] INFO  com.library.service.LibraryManager - Manager name set to: Chief Library Manager
+2025-06-29 17:23:30.405 [main] INFO  com.library.service.LibraryManager - Operating hours set to: 8:00 AM - 6:00 PM
+2025-06-29 17:23:30.406 [main] INFO  com.library.config.LibraryConfig - LibraryConfig initialized
+2025-06-29 17:23:30.406 [main] INFO  com.library.config.LibraryConfig - Application name configured: Digital Library Management System
+2025-06-29 17:23:30.406 [main] INFO  com.library.config.LibraryConfig - Version configured: 2.0
+2025-06-29 17:23:30.406 [main] INFO  com.library.config.LibraryConfig - Logging enabled: true
+2025-06-29 17:23:30.406 [main] INFO  com.library.config.LibraryConfig - Caching enabled: false
+2025-06-29 17:23:30.407 [main] INFO  com.library.service.BookService - Dependency injection status - BookRepository: INJECTED
+2025-06-29 17:23:30.424 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with default constructor
+2025-06-29 17:23:30.426 [main] INFO  c.library.repository.BookRepository - Repository name set to: Advanced Library Database Repository
+2025-06-29 17:23:30.426 [main] INFO  c.library.repository.BookRepository - Repository capacity set to: 1000
+2025-06-29 17:23:30.427 [main] INFO  c.library.repository.BookRepository - Connection timeout set to: 30 seconds
+2025-06-29 17:23:30.430 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with constructor injection - Name: Constructor-Based Repository, Capacity: 500, Timeout: 60
+2025-06-29 17:23:30.431 [main] INFO  com.library.service.BookService - BookService initialized with default constructor
+2025-06-29 17:23:30.432 [main] INFO  com.library.service.BookService - BookRepository injected into BookService via setter
+2025-06-29 17:23:30.432 [main] INFO  com.library.service.BookService - Service name set to: Enhanced Library Book Management Service
+2025-06-29 17:23:30.433 [main] INFO  com.library.service.BookService - Max books per user set to: 5
+2025-06-29 17:23:30.433 [main] INFO  com.library.service.BookService - Loan period set to: 14 days
+2025-06-29 17:23:30.436 [main] INFO  com.library.service.BookService - BookService initialized with constructor injection - Service: Constructor-Based Book Service, Max Books: 3, Loan Period: 21 days
+2025-06-29 17:23:30.439 [main] INFO  com.library.service.LibraryManager - LibraryManager initialized
+2025-06-29 17:23:30.440 [main] INFO  com.library.service.LibraryManager - BookService injected into LibraryManager
+2025-06-29 17:23:30.440 [main] INFO  com.library.service.LibraryManager - BookRepository injected into LibraryManager
+2025-06-29 17:23:30.440 [main] INFO  com.library.service.LibraryManager - Manager name set to: Chief Library Manager
+2025-06-29 17:23:30.440 [main] INFO  com.library.service.LibraryManager - Operating hours set to: 8:00 AM - 6:00 PM
+2025-06-29 17:23:30.441 [main] INFO  com.library.config.LibraryConfig - LibraryConfig initialized
+2025-06-29 17:23:30.442 [main] INFO  com.library.config.LibraryConfig - Application name configured: Digital Library Management System
+2025-06-29 17:23:30.442 [main] INFO  com.library.config.LibraryConfig - Version configured: 2.0
+2025-06-29 17:23:30.442 [main] INFO  com.library.config.LibraryConfig - Logging enabled: true
+2025-06-29 17:23:30.442 [main] INFO  com.library.config.LibraryConfig - Caching enabled: false
+2025-06-29 17:23:30.443 [main] INFO  com.library.service.BookService - Dependency injection status - BookRepository: INJECTED
+2025-06-29 17:23:30.460 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with default constructor
+2025-06-29 17:23:30.464 [main] INFO  c.library.repository.BookRepository - Repository name set to: Advanced Library Database Repository
+2025-06-29 17:23:30.464 [main] INFO  c.library.repository.BookRepository - Repository capacity set to: 1000
+2025-06-29 17:23:30.464 [main] INFO  c.library.repository.BookRepository - Connection timeout set to: 30 seconds
+2025-06-29 17:23:30.466 [main] INFO  c.library.repository.BookRepository - BookRepository initialized with constructor injection - Name: Constructor-Based Repository, Capacity: 500, Timeout: 60
+2025-06-29 17:23:30.466 [main] INFO  com.library.service.BookService - BookService initialized with default constructor
+2025-06-29 17:23:30.467 [main] INFO  com.library.service.BookService - BookRepository injected into BookService via setter
+2025-06-29 17:23:30.467 [main] INFO  com.library.service.BookService - Service name set to: Enhanced Library Book Management Service
+2025-06-29 17:23:30.468 [main] INFO  com.library.service.BookService - Max books per user set to: 5
+2025-06-29 17:23:30.468 [main] INFO  com.library.service.BookService - Loan period set to: 14 days
+2025-06-29 17:23:30.470 [main] INFO  com.library.service.BookService - BookService initialized with constructor injection - Service: Constructor-Based Book Service, Max Books: 3, Loan Period: 21 days
+2025-06-29 17:23:30.470 [main] INFO  com.library.service.LibraryManager - LibraryManager initialized
+2025-06-29 17:23:30.471 [main] INFO  com.library.service.LibraryManager - BookService injected into LibraryManager
+2025-06-29 17:23:30.472 [main] INFO  com.library.service.LibraryManager - BookRepository injected into LibraryManager
+2025-06-29 17:23:30.472 [main] INFO  com.library.service.LibraryManager - Manager name set to: Chief Library Manager
+2025-06-29 17:23:30.472 [main] INFO  com.library.service.LibraryManager - Operating hours set to: 8:00 AM - 6:00 PM
+2025-06-29 17:23:30.472 [main] INFO  com.library.config.LibraryConfig - LibraryConfig initialized
+2025-06-29 17:23:30.473 [main] INFO  com.library.config.LibraryConfig - Application name configured: Digital Library Management System
+2025-06-29 17:23:30.473 [main] INFO  com.library.config.LibraryConfig - Version configured: 2.0
+2025-06-29 17:23:30.473 [main] INFO  com.library.config.LibraryConfig - Logging enabled: true
+2025-06-29 17:23:30.473 [main] INFO  com.library.config.LibraryConfig - Caching enabled: false
+2025-06-29 17:23:30.474 [main] INFO  com.library.service.BookService - Processing book borrow request for ID: 1 by user: TEST_USER
+2025-06-29 17:23:30.474 [main] INFO  c.library.repository.BookRepository - Saving book: The Great Gatsby to repository: Advanced Library Database Repository
+2025-06-29 17:23:30.474 [main] INFO  com.library.service.BookService - Book borrowed successfully: The Great Gatsby for 14 days
+2025-06-29 17:23:30.474 [main] INFO  com.library.service.BookService - Processing book return for ID: 1 by user: TEST_USER
+2025-06-29 17:23:30.474 [main] INFO  c.library.repository.BookRepository - Saving book: The Great Gatsby to repository: Advanced Library Database Repository
+2025-06-29 17:23:30.474 [main] INFO  com.library.service.BookService - Book returned successfully: The Great Gatsby

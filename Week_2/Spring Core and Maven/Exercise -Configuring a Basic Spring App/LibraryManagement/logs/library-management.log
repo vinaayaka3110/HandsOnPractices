@@ -1,0 +1,142 @@
+2025-06-29 17:07:44.888 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Starting Library Management Application...
+2025-06-29 17:07:45.094 [com.library.LibraryManagementApp.main()] INFO  c.library.repository.BookRepository - BookRepository initialized
+2025-06-29 17:07:45.130 [com.library.LibraryManagementApp.main()] INFO  c.library.repository.BookRepository - Repository name set to: Library Database Repository
+2025-06-29 17:07:45.133 [com.library.LibraryManagementApp.main()] INFO  com.library.service.BookService - BookService initialized
+2025-06-29 17:07:45.135 [com.library.LibraryManagementApp.main()] INFO  com.library.service.BookService - BookRepository injected into BookService
+2025-06-29 17:07:45.137 [com.library.LibraryManagementApp.main()] INFO  com.library.service.BookService - Service name set to: Library Book Management Service
+2025-06-29 17:07:45.147 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Spring Application Context loaded successfully
+2025-06-29 17:07:45.147 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - BookService bean retrieved from Spring container
+2025-06-29 17:07:45.147 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - === Testing Library Management Operations ===
+2025-06-29 17:07:45.147 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - --- Displaying All Books ---
+2025-06-29 17:07:45.148 [com.library.LibraryManagementApp.main()] INFO  com.library.service.BookService - Found 5 books
+2025-06-29 17:07:45.148 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Book: Book{id=1, title='The Great Gatsby', author='F. Scott Fitzgerald', isbn='978-0-7432-7356-5', available=true}
+2025-06-29 17:07:45.150 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Book: Book{id=2, title='To Kill a Mockingbird', author='Harper Lee', isbn='978-0-06-112008-4', available=true}
+2025-06-29 17:07:45.151 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Book: Book{id=3, title='1984', author='George Orwell', isbn='978-0-452-28423-4', available=true}
+2025-06-29 17:07:45.151 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Book: Book{id=4, title='Pride and Prejudice', author='Jane Austen', isbn='978-0-14-143951-8', available=true}
+2025-06-29 17:07:45.151 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Book: Book{id=5, title='The Catcher in the Rye', author='J.D. Salinger', isbn='978-0-316-76948-0', available=true}
+2025-06-29 17:07:45.151 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - --- Adding New Book ---
+2025-06-29 17:07:45.152 [com.library.LibraryManagementApp.main()] INFO  com.library.service.BookService - Adding new book: Spring in Action by Craig Walls
+2025-06-29 17:07:45.152 [com.library.LibraryManagementApp.main()] INFO  c.library.repository.BookRepository - Saving book: Spring in Action
+2025-06-29 17:07:45.154 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Added new book: Book{id=6, title='Spring in Action', author='Craig Walls', isbn='978-1-935182-35-1', available=true}
+2025-06-29 17:07:45.154 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - --- Searching Books by Title ---
+2025-06-29 17:07:45.154 [com.library.LibraryManagementApp.main()] INFO  com.library.service.BookService - Searching books by title: Spring
+2025-06-29 17:07:45.156 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Found by title: Book{id=6, title='Spring in Action', author='Craig Walls', isbn='978-1-935182-35-1', available=true}
+2025-06-29 17:07:45.157 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - --- Searching Books by Author ---
+2025-06-29 17:07:45.157 [com.library.LibraryManagementApp.main()] INFO  com.library.service.BookService - Searching books by author: George
+2025-06-29 17:07:45.160 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Found by author: Book{id=3, title='1984', author='George Orwell', isbn='978-0-452-28423-4', available=true}
+2025-06-29 17:07:45.161 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - --- Borrowing Book ---
+2025-06-29 17:07:45.162 [com.library.LibraryManagementApp.main()] INFO  com.library.service.BookService - Processing book borrow request for ID: 1
+2025-06-29 17:07:45.162 [com.library.LibraryManagementApp.main()] INFO  c.library.repository.BookRepository - Saving book: The Great Gatsby
+2025-06-29 17:07:45.162 [com.library.LibraryManagementApp.main()] INFO  com.library.service.BookService - Book borrowed successfully: The Great Gatsby
+2025-06-29 17:07:45.162 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Borrow result for book ID 1: true
+2025-06-29 17:07:45.163 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - --- Trying to Borrow Same Book Again ---
+2025-06-29 17:07:45.163 [com.library.LibraryManagementApp.main()] INFO  com.library.service.BookService - Processing book borrow request for ID: 1
+2025-06-29 17:07:45.163 [com.library.LibraryManagementApp.main()] WARN  com.library.service.BookService - Book is not available for borrowing: The Great Gatsby
+2025-06-29 17:07:45.164 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Second borrow attempt for book ID 1: false
+2025-06-29 17:07:45.164 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - --- Returning Book ---
+2025-06-29 17:07:45.164 [com.library.LibraryManagementApp.main()] INFO  com.library.service.BookService - Processing book return for ID: 1
+2025-06-29 17:07:45.164 [com.library.LibraryManagementApp.main()] INFO  c.library.repository.BookRepository - Saving book: The Great Gatsby
+2025-06-29 17:07:45.164 [com.library.LibraryManagementApp.main()] INFO  com.library.service.BookService - Book returned successfully: The Great Gatsby
+2025-06-29 17:07:45.165 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Return result for book ID 1: true
+2025-06-29 17:07:45.165 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - --- Updating Book ---
+2025-06-29 17:07:45.165 [com.library.LibraryManagementApp.main()] INFO  com.library.service.BookService - Updating book with ID: 2
+2025-06-29 17:07:45.165 [com.library.LibraryManagementApp.main()] INFO  c.library.repository.BookRepository - Saving book: To Kill a Mockingbird - Updated
+2025-06-29 17:07:45.165 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Updated book: Book{id=2, title='To Kill a Mockingbird - Updated', author='Harper Lee', isbn='978-0-06-112008-4', available=true}
+2025-06-29 17:07:45.166 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - --- Library Statistics ---
+2025-06-29 17:07:45.166 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Total books: 6
+2025-06-29 17:07:45.169 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Available books: 6
+2025-06-29 17:07:45.170 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - --- Finding Specific Book ---
+2025-06-29 17:07:45.170 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Found book: Book{id=3, title='1984', author='George Orwell', isbn='978-0-452-28423-4', available=true}
+2025-06-29 17:07:45.170 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - === Library Management Operations Completed ===
+2025-06-29 17:07:45.170 [com.library.LibraryManagementApp.main()] INFO  com.library.LibraryManagementApp - Library Management Application finished.
+2025-06-29 17:08:06.562 [main] INFO  c.library.repository.BookRepository - BookRepository initialized
+2025-06-29 17:08:06.612 [main] INFO  c.library.repository.BookRepository - Repository name set to: Library Database Repository
+2025-06-29 17:08:06.615 [main] INFO  com.library.service.BookService - BookService initialized
+2025-06-29 17:08:06.619 [main] INFO  com.library.service.BookService - BookRepository injected into BookService
+2025-06-29 17:08:06.620 [main] INFO  com.library.service.BookService - Service name set to: Library Book Management Service
+2025-06-29 17:08:06.644 [main] INFO  com.library.service.BookService - Processing book borrow request for ID: 1
+2025-06-29 17:08:06.645 [main] INFO  c.library.repository.BookRepository - Saving book: The Great Gatsby
+2025-06-29 17:08:06.645 [main] INFO  com.library.service.BookService - Book borrowed successfully: The Great Gatsby
+2025-06-29 17:08:06.689 [main] INFO  c.library.repository.BookRepository - BookRepository initialized
+2025-06-29 17:08:06.690 [main] INFO  c.library.repository.BookRepository - Repository name set to: Library Database Repository
+2025-06-29 17:08:06.692 [main] INFO  com.library.service.BookService - BookService initialized
+2025-06-29 17:08:06.694 [main] INFO  com.library.service.BookService - BookRepository injected into BookService
+2025-06-29 17:08:06.694 [main] INFO  com.library.service.BookService - Service name set to: Library Book Management Service
+2025-06-29 17:08:06.695 [main] INFO  com.library.service.BookService - Adding new book: Test Book by Test Author
+2025-06-29 17:08:06.695 [main] INFO  c.library.repository.BookRepository - Saving book: Test Book
+2025-06-29 17:08:06.729 [main] INFO  c.library.repository.BookRepository - BookRepository initialized
+2025-06-29 17:08:06.729 [main] INFO  c.library.repository.BookRepository - Repository name set to: Library Database Repository
+2025-06-29 17:08:06.730 [main] INFO  com.library.service.BookService - BookService initialized
+2025-06-29 17:08:06.730 [main] INFO  com.library.service.BookService - BookRepository injected into BookService
+2025-06-29 17:08:06.731 [main] INFO  com.library.service.BookService - Service name set to: Library Book Management Service
+2025-06-29 17:08:06.733 [main] INFO  com.library.service.BookService - Updating book with ID: 999
+2025-06-29 17:08:06.733 [main] ERROR com.library.service.BookService - Cannot update book - book not found with ID: 999
+2025-06-29 17:08:06.756 [main] INFO  c.library.repository.BookRepository - BookRepository initialized
+2025-06-29 17:08:06.757 [main] INFO  c.library.repository.BookRepository - Repository name set to: Library Database Repository
+2025-06-29 17:08:06.758 [main] INFO  com.library.service.BookService - BookService initialized
+2025-06-29 17:08:06.759 [main] INFO  com.library.service.BookService - BookRepository injected into BookService
+2025-06-29 17:08:06.759 [main] INFO  com.library.service.BookService - Service name set to: Library Book Management Service
+2025-06-29 17:08:06.760 [main] INFO  com.library.service.BookService - Processing book borrow request for ID: 1
+2025-06-29 17:08:06.760 [main] INFO  c.library.repository.BookRepository - Saving book: The Great Gatsby
+2025-06-29 17:08:06.760 [main] INFO  com.library.service.BookService - Book borrowed successfully: The Great Gatsby
+2025-06-29 17:08:06.761 [main] INFO  com.library.service.BookService - Processing book borrow request for ID: 1
+2025-06-29 17:08:06.762 [main] WARN  com.library.service.BookService - Book is not available for borrowing: The Great Gatsby
+2025-06-29 17:08:06.762 [main] INFO  com.library.service.BookService - Processing book return for ID: 1
+2025-06-29 17:08:06.762 [main] INFO  c.library.repository.BookRepository - Saving book: The Great Gatsby
+2025-06-29 17:08:06.762 [main] INFO  com.library.service.BookService - Book returned successfully: The Great Gatsby
+2025-06-29 17:08:06.792 [main] INFO  c.library.repository.BookRepository - BookRepository initialized
+2025-06-29 17:08:06.793 [main] INFO  c.library.repository.BookRepository - Repository name set to: Library Database Repository
+2025-06-29 17:08:06.793 [main] INFO  com.library.service.BookService - BookService initialized
+2025-06-29 17:08:06.795 [main] INFO  com.library.service.BookService - BookRepository injected into BookService
+2025-06-29 17:08:06.795 [main] INFO  com.library.service.BookService - Service name set to: Library Book Management Service
+2025-06-29 17:08:06.834 [main] INFO  c.library.repository.BookRepository - BookRepository initialized
+2025-06-29 17:08:06.836 [main] INFO  c.library.repository.BookRepository - Repository name set to: Library Database Repository
+2025-06-29 17:08:06.837 [main] INFO  com.library.service.BookService - BookService initialized
+2025-06-29 17:08:06.838 [main] INFO  com.library.service.BookService - BookRepository injected into BookService
+2025-06-29 17:08:06.839 [main] INFO  com.library.service.BookService - Service name set to: Library Book Management Service
+2025-06-29 17:08:06.842 [main] INFO  com.library.service.BookService - Found 5 books
+2025-06-29 17:08:06.876 [main] INFO  c.library.repository.BookRepository - BookRepository initialized
+2025-06-29 17:08:06.878 [main] INFO  c.library.repository.BookRepository - Repository name set to: Library Database Repository
+2025-06-29 17:08:06.878 [main] INFO  com.library.service.BookService - BookService initialized
+2025-06-29 17:08:06.879 [main] INFO  com.library.service.BookService - BookRepository injected into BookService
+2025-06-29 17:08:06.879 [main] INFO  com.library.service.BookService - Service name set to: Library Book Management Service
+2025-06-29 17:08:06.881 [main] INFO  com.library.service.BookService - Updating book with ID: 2
+2025-06-29 17:08:06.881 [main] INFO  c.library.repository.BookRepository - Saving book: Updated Title
+2025-06-29 17:08:06.899 [main] INFO  c.library.repository.BookRepository - BookRepository initialized
+2025-06-29 17:08:06.900 [main] INFO  c.library.repository.BookRepository - Repository name set to: Library Database Repository
+2025-06-29 17:08:06.901 [main] INFO  com.library.service.BookService - BookService initialized
+2025-06-29 17:08:06.901 [main] INFO  com.library.service.BookService - BookRepository injected into BookService
+2025-06-29 17:08:06.901 [main] INFO  com.library.service.BookService - Service name set to: Library Book Management Service
+2025-06-29 17:08:06.919 [main] INFO  c.library.repository.BookRepository - BookRepository initialized
+2025-06-29 17:08:06.920 [main] INFO  c.library.repository.BookRepository - Repository name set to: Library Database Repository
+2025-06-29 17:08:06.920 [main] INFO  com.library.service.BookService - BookService initialized
+2025-06-29 17:08:06.921 [main] INFO  com.library.service.BookService - BookRepository injected into BookService
+2025-06-29 17:08:06.921 [main] INFO  com.library.service.BookService - Service name set to: Library Book Management Service
+2025-06-29 17:08:06.922 [main] INFO  com.library.service.BookService - Searching books by title: Great
+2025-06-29 17:08:06.944 [main] INFO  c.library.repository.BookRepository - BookRepository initialized
+2025-06-29 17:08:06.945 [main] INFO  c.library.repository.BookRepository - Repository name set to: Library Database Repository
+2025-06-29 17:08:06.945 [main] INFO  com.library.service.BookService - BookService initialized
+2025-06-29 17:08:06.946 [main] INFO  com.library.service.BookService - BookRepository injected into BookService
+2025-06-29 17:08:06.946 [main] INFO  com.library.service.BookService - Service name set to: Library Book Management Service
+2025-06-29 17:08:06.962 [main] INFO  c.library.repository.BookRepository - BookRepository initialized
+2025-06-29 17:08:06.963 [main] INFO  c.library.repository.BookRepository - Repository name set to: Library Database Repository
+2025-06-29 17:08:06.964 [main] INFO  com.library.service.BookService - BookService initialized
+2025-06-29 17:08:06.965 [main] INFO  com.library.service.BookService - BookRepository injected into BookService
+2025-06-29 17:08:06.966 [main] INFO  com.library.service.BookService - Service name set to: Library Book Management Service
+2025-06-29 17:08:06.967 [main] INFO  com.library.service.BookService - Deleting book with ID: 5
+2025-06-29 17:08:06.967 [main] INFO  c.library.repository.BookRepository - Deleting book with ID: 5
+2025-06-29 17:08:06.967 [main] INFO  com.library.service.BookService - Book deleted successfully with ID: 5
+2025-06-29 17:08:06.967 [main] WARN  com.library.service.BookService - Book not found with ID: 5
+2025-06-29 17:08:06.987 [main] INFO  c.library.repository.BookRepository - BookRepository initialized
+2025-06-29 17:08:06.988 [main] INFO  c.library.repository.BookRepository - Repository name set to: Library Database Repository
+2025-06-29 17:08:06.989 [main] INFO  com.library.service.BookService - BookService initialized
+2025-06-29 17:08:06.990 [main] INFO  com.library.service.BookService - BookRepository injected into BookService
+2025-06-29 17:08:06.990 [main] INFO  com.library.service.BookService - Service name set to: Library Book Management Service
+2025-06-29 17:08:06.991 [main] INFO  com.library.service.BookService - Deleting book with ID: 999
+2025-06-29 17:08:06.992 [main] ERROR com.library.service.BookService - Cannot delete book - book not found with ID: 999
+2025-06-29 17:08:07.012 [main] INFO  c.library.repository.BookRepository - BookRepository initialized
+2025-06-29 17:08:07.013 [main] INFO  c.library.repository.BookRepository - Repository name set to: Library Database Repository
+2025-06-29 17:08:07.014 [main] INFO  com.library.service.BookService - BookService initialized
+2025-06-29 17:08:07.014 [main] INFO  com.library.service.BookService - BookRepository injected into BookService
+2025-06-29 17:08:07.014 [main] INFO  com.library.service.BookService - Service name set to: Library Book Management Service
+2025-06-29 17:08:07.015 [main] INFO  com.library.service.BookService - Searching books by author: George

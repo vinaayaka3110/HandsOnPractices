@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop.xsd
+           http://www.springframework.org/schema/tx
+           http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!-- Enable component scanning -->
+    <context:component-scan base-package="com.library"/>
+
+    <!-- Enable AOP -->
+    <aop:aspectj-autoproxy/>
+
+    <!-- Enable annotation-based configuration -->
+    <context:annotation-config/>
+
+    <!-- Property placeholder configuration -->
+    <context:property-placeholder location="classpath:application.properties"/>
+
+    <!-- BookRepository Bean -->
+    <bean id="bookRepository" class="com.library.repository.BookRepository">
+        <property name="databaseUrl" value="${database.url}"/>
+        <property name="maxConnections" value="${database.max.connections}"/>
+    </bean>
+
+    <!-- BookService Bean -->
+    <bean id="bookService" class="com.library.service.BookService">
+        <property name="bookRepository" ref="bookRepository"/>
+        <property name="maxBooksPerUser" value="${library.max.books.per.user}"/>
+    </bean>
+
+    <!-- LibraryAspect Bean for AOP -->
+    <bean id="libraryAspect" class="com.library.aspect.LibraryAspect"/>
+
+</beans>

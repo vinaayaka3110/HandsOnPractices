@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- BookRepository Bean Configuration -->
+    <bean id="bookRepository" class="com.library.repository.BookRepository">
+        <property name="repositoryName" value="Advanced Library Database Repository"/>
+        <property name="maxCapacity" value="1000"/>
+        <property name="connectionTimeout" value="30"/>
+    </bean>
+
+    <!-- Alternative BookRepository with Constructor Injection -->
+    <bean id="bookRepositoryWithConstructor" class="com.library.repository.BookRepository">
+        <constructor-arg value="Constructor-Based Repository"/>
+        <constructor-arg value="500"/>
+        <constructor-arg value="60"/>
+    </bean>
+
+    <!-- BookService Bean with Setter-based Dependency Injection -->
+    <bean id="bookService" class="com.library.service.BookService">
+        <property name="bookRepository" ref="bookRepository"/>
+        <property name="serviceName" value="Enhanced Library Book Management Service"/>
+        <property name="maxBooksPerUser" value="5"/>
+        <property name="loanPeriodDays" value="14"/>
+    </bean>
+
+    <!-- BookService Bean with Constructor-based Dependency Injection -->
+    <bean id="bookServiceWithConstructor" class="com.library.service.BookService">
+        <constructor-arg ref="bookRepositoryWithConstructor"/>
+        <constructor-arg value="Constructor-Based Book Service"/>
+        <constructor-arg value="3"/>
+        <constructor-arg value="21"/>
+    </bean>
+
+    <!-- LibraryManager Bean demonstrating multiple dependencies -->
+    <bean id="libraryManager" class="com.library.service.LibraryManager">
+        <property name="bookService" ref="bookService"/>
+        <property name="bookRepository" ref="bookRepository"/>
+        <property name="managerName" value="Chief Library Manager"/>
+        <property name="operatingHours" value="8:00 AM - 6:00 PM"/>
+    </bean>
+
+    <!-- Configuration Bean for application settings -->
+    <bean id="libraryConfig" class="com.library.config.LibraryConfig">
+        <property name="applicationName" value="Digital Library Management System"/>
+        <property name="version" value="2.0"/>
+        <property name="enableLogging" value="true"/>
+        <property name="enableCaching" value="false"/>
+    </bean>
+
+</beans>
