@@ -1,0 +1,4 @@
+Logger Instance Created!.
+log: Application Start.
+log: Running Application...
+ONE logger instance is there.

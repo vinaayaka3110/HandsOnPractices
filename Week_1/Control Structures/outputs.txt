@@ -1,0 +1,34 @@
+#create_tables ...............................
+Table CUSTOMERS created.
+Table LOANS created.
+
+#insert_data ..................................
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+
+Commit complete.
+
+#scenario_1 ...................................
+Discount applied to Customer ID: 101
+Discount applied to Customer ID: 103
+Discount applied to Customer ID: 105 
+
+#scenario_2 ......................................
+Customer 101 promoted to VIP.
+Customer 103 promoted to VIP.
+Customer 105 promoted to VIP. 
+
+#scenario_3 ........................................
+Reminder: Dear John, your Loan ID 5001 is due on 05-JUL-2026
+Reminder: Dear David, your Loan ID 5003 is due on 10-JUL-2026
+Reminder: Dear Emma, your Loan ID 5004 is due on 30-JUN-2026
+Reminder: Dear Sophia, your Loan ID 5005 is due on 15-JUL-2026

@@ -1,0 +1,29 @@
+=== Linear Search ===
+Product Found:
+Product ID: 103
+Product Name: Mobile
+Category: Electronics
+
+=== Binary Search ===
+Product Found:
+Product ID: 103
+Product Name: Mobile
+Category: Electronics
+
+
+
+...........................................................
+-------------------linear------binary-----
+| Case         | Complexity | Complexity |
+| ------------ | ---------- | ---------- |
+| Best Case    | O(1)       | O(1)       |
+| Average Case | O(n)       | O(log n)   |
+| Worst Case   | O(n)       | O(log n)   |
+
+
+Comparison between both,..
+- Both Linear and Binary Search are suitable for "Small Data",
+- But only Binary Search is optimal for "Large Data".
+- Since the Binary Search is optimal for large data but , it requires sorted data or sorting before applying the search agorithm.
+
+-Hence the Binary search is optimal when data is large and sorted!.

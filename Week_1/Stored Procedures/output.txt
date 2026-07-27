@@ -1,0 +1,27 @@
+#create_tables ...............................
+Table Accounts created.
+Table Employees created.
+
+
+#insert_data ..................................
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+
+Commit complete.
+
+
+#Scenario 1 ...................................
+Monthly interest applied successfully.
+
+#Scenario 2 ....................................
+Bonus updated successfully.
+
+#Scenario 3 ...................................
+Fund transfer successful.

@@ -1,0 +1,16 @@
+Present Value: Rs 10000.0
+Growth Rate: 10.0%
+Years: 5
+Future Value: Rs 16105.10
+
+
+................................................................................
+Since the recursion function makes one recursive call for each year(n),
+so, (n-1) + O(1) becomoes
+the time complexity of O(n) 
+
+..............................................
+To optimize the recursive solution to avoid excessive computation:
+-we can store the previous computed value ,
+-or instead of recursion we can directly compute using the formula : value*(1+growthRate)^years, 
+It reduces the both time and space complexities O(log n) .....
