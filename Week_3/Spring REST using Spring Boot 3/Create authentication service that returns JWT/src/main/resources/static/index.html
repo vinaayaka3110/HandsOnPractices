@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWT Authentication Service</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f8f9fa; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .endpoint { background: #f8f9fa; padding: 20px; margin: 15px 0; border-radius: 5px; border-left: 4px solid #007bff; }
+        .method { background: #28a745; color: white; padding: 5px 12px; border-radius: 3px; font-weight: bold; }
+        .url { font-family: 'Courier New', monospace; background: #e9ecef; padding: 8px; border-radius: 3px; font-weight: bold; }
+        .code { background: #f8f9fa; border: 1px solid #dee2e6; padding: 15px; border-radius: 3px; font-family: 'Courier New', monospace; overflow-x: auto; }
+        .curl-command { background: #2d3748; color: #e2e8f0; padding: 15px; border-radius: 5px; font-family: 'Courier New', monospace; overflow-x: auto; }
+        .response { background: #d4edda; border: 1px solid #c3e6cb; padding: 15px; border-radius: 3px; }
+        .steps { background: #fff3cd; border: 1px solid #ffeeba; padding: 15px; border-radius: 3px; }
+        h1 { color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+        h2 { color: #495057; margin-top: 30px; }
+        h3 { color: #6c757d; }
+        .credentials { background: #f1f3f4; padding: 10px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 JWT Authentication Service</h1>
+        <p>Welcome to the JWT Authentication Service! This service generates JWT tokens for authenticated users using Spring Boot Security.</p>
+        
+        <h2>📋 Service Overview</h2>
+        <div class="steps">
+            <h3>Three Major Implementation Steps:</h3>
+            <ol>
+                <li><strong>Create authentication controller and configure it in SecurityConfig</strong> ✅</li>
+                <li><strong>Read Authorization header and decode the username and password</strong> ✅</li>
+                <li><strong>Generate token based on the user retrieved in the previous step</strong> ✅</li>
+            </ol>
+        </div>
+
+        <h2>🚀 Main Authentication Endpoint</h2>
+        <div class="endpoint">
+            <h3>Authenticate and Get JWT Token</h3>
+            <p><span class="method">GET</span> <span class="url">/authenticate</span></p>
+            
+            <h4>📝 Request (using curl):</h4>
+            <div class="curl-command">
+curl -s -u user:pwd http://localhost:8090/authenticate
+            </div>
+            
+            <h4>📤 Response:</h4>
+            <div class="response code">
+{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNTcwMzc5NDc0LCJleHAiOjE1NzAzODA2NzR9.t3LRvlCV-hwKfoqZYlaVQqEUiBloWcWn0ft3tgv0dL0"}
+            </div>
+        </div>
+
+        <h2>🔑 Valid Credentials</h2>
+        <div class="credentials">
+            <h4>You can test with these credentials:</h4>
+            <ul>
+                <li><strong>user:pwd</strong> (Primary test credential as specified)</li>
+                <li><strong>admin:admin</strong> (Additional test credential)</li>
+                <li><strong>test:test</strong> (Additional test credential)</li>
+            </ul>
+        </div>
+
+        <h2>🧪 Testing Examples</h2>
+        
+        <div class="endpoint">
+            <h3>Test with user:pwd (Primary)</h3>
+            <div class="curl-command">
+curl -s -u user:pwd http://localhost:8090/authenticate
+            </div>
+        </div>
+
+        <div class="endpoint">
+            <h3>Test with admin:admin</h3>
+            <div class="curl-command">
+curl -s -u admin:admin http://localhost:8090/authenticate
+            </div>
+        </div>
+
+        <div class="endpoint">
+            <h3>Test with test:test</h3>
+            <div class="curl-command">
+curl -s -u test:test http://localhost:8090/authenticate
+            </div>
+        </div>
+
+        <div class="endpoint">
+            <h3>Test with invalid credentials (should fail)</h3>
+            <div class="curl-command">
+curl -s -u invalid:wrong http://localhost:8090/authenticate
+            </div>
+        </div>
+
+        <h2>🔧 Additional Endpoints</h2>
+        
+        <div class="endpoint">
+            <h3>Health Check</h3>
+            <p><span class="method">GET</span> <span class="url">/health</span></p>
+            <div class="curl-command">
+curl http://localhost:8090/health
+            </div>
+        </div>
+
+        <h2>⚙️ Implementation Details</h2>
+        <div class="code">
+<strong>Controller:</strong> com.cognizant.jwt.controller.AuthController
+<strong>Security Config:</strong> com.cognizant.jwt.config.SecurityConfig
+<strong>JWT Utility:</strong> com.cognizant.jwt.util.JwtUtil
+<strong>Response Model:</strong> com.cognizant.jwt.model.JwtResponse
+
+<strong>Port:</strong> 8090
+<strong>JWT Secret:</strong> Configurable via application.properties
+<strong>Token Expiration:</strong> 20 minutes (1200000 ms)
+<strong>Algorithm:</strong> HS256
+        </div>
+
+        <h2>🔍 How It Works</h2>
+        <div class="steps">
+            <ol>
+                <li><strong>Client sends request</strong> with Basic Authentication header (-u option in curl)</li>
+                <li><strong>Controller reads Authorization header</strong> and decodes Base64 credentials</li>
+                <li><strong>Credentials are validated</strong> against predefined users</li>
+                <li><strong>JWT token is generated</strong> with username as subject</li>
+                <li><strong>Token is returned</strong> in JSON format</li>
+            </ol>
+        </div>
+
+        <h2>🛡️ Security Features</h2>
+        <ul>
+            <li>CSRF protection disabled for REST API</li>
+            <li>Stateless session management</li>
+            <li>JWT tokens with expiration</li>
+            <li>Base64 credential decoding</li>
+            <li>HTTP Basic authentication support</li>
+        </ul>
+
+        <p><em>Note: This is a demonstration service with hardcoded credentials. In production, integrate with a proper user store and authentication system.</em></p>
+    </div>
+</body>
+</html>

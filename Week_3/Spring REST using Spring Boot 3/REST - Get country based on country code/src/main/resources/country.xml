@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- Individual Country Beans -->
+    <bean id="india" class="com.cognizant.springlearn.model.Country">
+        <property name="code" value="IN"/>
+        <property name="name" value="India"/>
+    </bean>
+
+    <bean id="usa" class="com.cognizant.springlearn.model.Country">
+        <property name="code" value="US"/>
+        <property name="name" value="United States"/>
+    </bean>
+
+    <bean id="japan" class="com.cognizant.springlearn.model.Country">
+        <property name="code" value="JP"/>
+        <property name="name" value="Japan"/>
+    </bean>
+
+    <bean id="germany" class="com.cognizant.springlearn.model.Country">
+        <property name="code" value="DE"/>
+        <property name="name" value="Germany"/>
+    </bean>
+
+    <bean id="uk" class="com.cognizant.springlearn.model.Country">
+        <property name="code" value="GB"/>
+        <property name="name" value="United Kingdom"/>
+    </bean>
+
+    <bean id="france" class="com.cognizant.springlearn.model.Country">
+        <property name="code" value="FR"/>
+        <property name="name" value="France"/>
+    </bean>
+
+    <bean id="canada" class="com.cognizant.springlearn.model.Country">
+        <property name="code" value="CA"/>
+        <property name="name" value="Canada"/>
+    </bean>
+
+    <bean id="australia" class="com.cognizant.springlearn.model.Country">
+        <property name="code" value="AU"/>
+        <property name="name" value="Australia"/>
+    </bean>
+
+    <!-- Country List Configuration -->
+    <util:list id="countryList" value-type="com.cognizant.springlearn.model.Country">
+        <ref bean="india"/>
+        <ref bean="usa"/>
+        <ref bean="japan"/>
+        <ref bean="germany"/>
+        <ref bean="uk"/>
+        <ref bean="france"/>
+        <ref bean="canada"/>
+        <ref bean="australia"/>
+    </util:list>
+
+</beans>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spring XML Configuration Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .success { color: green; }
+        .code { background-color: #f4f4f4; padding: 10px; border-left: 4px solid #007acc; }
+        .endpoint { background-color: #e8f4fd; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spring Core - Load SimpleDateFormat from Spring Configuration XML</h1>
+        
+        <h2>Demo Overview</h2>
+        <p>This application demonstrates how to load SimpleDateFormat from Spring XML Configuration to avoid creating it in multiple places.</p>
+        
+        <div class="endpoint">
+            <h3>Available Endpoints:</h3>
+            <ul>
+                <li><a href="/">Home (Dynamic XML Demo)</a></li>
+                <li><a href="/health">Health Check</a></li>
+                <li><a href="/xml-demo">XML Demo (JSON Response)</a></li>
+            </ul>
+        </div>
+        
+        <h3>XML Configuration (date-format.xml):</h3>
+        <div class="code">
+            <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd"&gt;
+
+    &lt;bean id="dateFormat" class="java.text.SimpleDateFormat"&gt;
+        &lt;constructor-arg value="dd/MM/yyyy" /&gt;
+    &lt;/bean&gt;
+
+&lt;/beans&gt;</pre>
+        </div>
+        
+        <h3>Implementation Details:</h3>
+        <ul>
+            <li><strong>ApplicationContext:</strong> ClassPathXmlApplicationContext("date-format.xml")</li>
+            <li><strong>Bean Retrieval:</strong> context.getBean("dateFormat", SimpleDateFormat.class)</li>
+            <li><strong>Date Parsing:</strong> format.parse("31/12/2018")</li>
+            <li><strong>Pattern:</strong> dd/MM/yyyy</li>
+        </ul>
+        
+        <div class="success">
+            <p><strong>✅ Benefits:</strong></p>
+            <ul>
+                <li>Single SimpleDateFormat instance defined in XML</li>
+                <li>Reusable across multiple classes</li>
+                <li>Centralized configuration management</li>
+                <li>Spring IoC container manages lifecycle</li>
+            </ul>
+        </div>
+        
+        <p><em>Application running on port 8081</em></p>
+    </div>
+</body>
+</html>
