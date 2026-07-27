@@ -1,0 +1,106 @@
+<h2>Course Management</h2>
+
+<hr>
+
+<h3>{{ editing ? 'Update Course' : 'Add Course' }}</h3>
+
+<p>
+    <input
+        type="text"
+        placeholder="Course Name"
+        [(ngModel)]="newCourse.name">
+</p>
+
+<p>
+    <input
+        type="text"
+        placeholder="Course Code"
+        [(ngModel)]="newCourse.code">
+</p>
+
+<p>
+    <input
+        type="number"
+        placeholder="Credits"
+        [(ngModel)]="newCourse.credits">
+</p>
+
+<p>
+    <select [(ngModel)]="newCourse.gradeStatus">
+
+        <option value="passed">
+            Passed
+        </option>
+
+        <option value="failed">
+            Failed
+        </option>
+
+        <option value="pending">
+            Pending
+        </option>
+
+    </select>
+</p>
+
+<p>
+
+    <button
+        *ngIf="!editing"
+        (click)="createCourse()">
+
+        Add Course
+
+    </button>
+
+    <button
+        *ngIf="editing"
+        (click)="updateCourse()">
+
+        Update Course
+
+    </button>
+
+    <button
+        *ngIf="editing"
+        (click)="resetForm()">
+
+        Cancel
+
+    </button>
+
+</p>
+
+<hr>
+
+<h3>Available Courses</h3>
+
+<ul>
+
+    <li *ngFor="let course of courses">
+
+        <strong>{{ course.name }}</strong>
+
+        ({{ course.code }})
+
+        - {{ course.credits }} Credits
+
+        - {{ course.gradeStatus }}
+
+        <button
+            (click)="edit(course)">
+
+            Edit
+
+        </button>
+
+        <button
+            (click)="deleteCourse(course.id)">
+
+            Delete
+
+        </button>
+
+    </li>
+
+</ul>

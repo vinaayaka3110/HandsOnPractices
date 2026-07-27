@@ -1,0 +1,29 @@
+angular.json
+Contains the Angular CLI project configuration such as build, serve, test, and assets settings.
+
+tsconfig.json
+Base TypeScript configuration file for the project.
+
+tsconfig.app.json
+TypeScript configuration specifically for the Angular application.
+
+package.json
+Contains project metadata, dependencies, and npm scripts.
+
+src/main.ts
+The entry point of the Angular application. It bootstraps the root component.
+
+src/app/app.config.ts
+Configures the standalone Angular application, including routing and providers.
+
+src/app/app.component.ts
+The root component of the Angular application.
+
+src/index.html
+The main HTML page where the Angular application is loaded.
+
+maximumWarning
+Shows a warning if the bundle size exceeds the specified limit.
+
+maximumError
+Fails the production build if the bundle size exceeds the specified limit.

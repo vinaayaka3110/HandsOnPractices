@@ -1,0 +1,32 @@
+form {
+    width: 400px;
+}
+
+input:not([type="checkbox"]),
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+}
+
+.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+
+.ng-valid.ng-touched {
+    border: 2px solid green;
+}
+
+span {
+    font-size: 14px;
+}

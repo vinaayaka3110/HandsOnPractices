@@ -1,0 +1,40 @@
+<h1>{{ portalName }}</h1>
+
+<p>
+  Manage your courses, track your progress, and view your student profile.
+</p>
+
+<p><strong>Courses Available:</strong> {{ availableCourses }}</p>
+
+<p><strong>Enrolled:</strong> 3</p>
+
+<p><strong>GPA:</strong> 3.8</p>
+
+<br>
+
+<button
+    [disabled]="!isPortalActive"
+    (click)="onEnrollClick()">
+    Enroll Now
+</button>
+
+<p>{{ message }}</p>
+
+<br>
+
+<input
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Search courses">
+
+<p>Searching for: {{ searchTerm }}</p>
+<app-course-summary-widget></app-course-summary-widget>
+<app-notification></app-notification>
+
+<!--
+[property]
+One-way binding from Component → DOM
+
+[(ngModel)]
+Two-way binding between Component ↔ DOM
+-->

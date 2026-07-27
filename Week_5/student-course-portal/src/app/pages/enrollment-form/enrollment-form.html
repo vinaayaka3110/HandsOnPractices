@@ -1,0 +1,181 @@
+<h2>Enrollment Request Form</h2>
+
+<form
+    #enrollForm="ngForm"
+    (ngSubmit)="onSubmit(enrollForm)">
+
+    <p>
+
+        <label>Student Name</label>
+
+        <br>
+
+        <input
+            type="text"
+            name="studentName"
+            required
+            minlength="3"
+            [(ngModel)]="studentName"
+            #nameCtrl="ngModel">
+
+        <br>
+
+        <span
+            *ngIf="nameCtrl.touched && nameCtrl.errors?.['required']"
+            style="color:red;">
+
+            Name is required
+
+        </span>
+
+        <span
+            *ngIf="nameCtrl.touched && nameCtrl.errors?.['minlength']"
+            style="color:red;">
+
+            Name must be at least 3 characters
+
+        </span>
+
+    </p>
+
+    <p>
+
+        <label>Email</label>
+
+        <br>
+
+        <input
+            type="email"
+            name="studentEmail"
+            required
+            email
+            [(ngModel)]="studentEmail"
+            #emailCtrl="ngModel">
+
+        <br>
+
+        <span
+            *ngIf="emailCtrl.touched && emailCtrl.errors?.['required']"
+            style="color:red;">
+
+            Email is required
+
+        </span>
+
+        <span
+            *ngIf="emailCtrl.touched && emailCtrl.errors?.['email']"
+            style="color:red;">
+
+            Enter a valid email
+
+        </span>
+
+    </p>
+
+    <p>
+
+        <label>Course ID</label>
+
+        <br>
+
+        <input
+            type="number"
+            name="courseId"
+            required
+            [(ngModel)]="courseId"
+            #courseCtrl="ngModel">
+
+        <br>
+
+        <span
+            *ngIf="courseCtrl.touched && courseCtrl.errors?.['required']"
+            style="color:red;">
+
+            Course ID is required
+
+        </span>
+
+    </p>
+
+    <p>
+
+        <label>Preferred Semester</label>
+
+        <br>
+
+        <select
+            name="preferredSemester"
+            required
+            [(ngModel)]="preferredSemester"
+            #semesterCtrl="ngModel">
+
+            <option value="">
+                Select Semester
+            </option>
+
+            <option value="Odd">
+                Odd
+            </option>
+
+            <option value="Even">
+                Even
+            </option>
+
+        </select>
+
+    </p>
+
+    <p>
+
+        <label>
+
+            <input
+                type="checkbox"
+                name="agreeToTerms"
+                required
+                [(ngModel)]="agreeToTerms"
+                #termsCtrl="ngModel">
+
+            I agree to the Terms and Conditions
+
+        </label>
+
+        <br>
+
+        <span
+            *ngIf="termsCtrl.touched && termsCtrl.errors?.['required']"
+            style="color:red;">
+
+            You must accept the Terms
+
+        </span>
+
+    </p>
+
+    <button
+        type="submit"
+        [disabled]="enrollForm.invalid">
+
+        Submit
+
+    </button>
+
+    &nbsp;
+
+    <button
+        type="button"
+        (click)="enrollForm.resetForm()">
+
+        Reset
+
+    </button>
+
+</form>
+
+<div
+    *ngIf="submitted"
+    style="margin-top:20px;color:green;font-weight:bold;">
+
+    Enrollment request submitted successfully!
+
+</div>
